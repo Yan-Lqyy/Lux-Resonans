@@ -1,0 +1,25 @@
+<!-- /lux_resonans/templates/layout.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Lux Resonans{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    {% block head_extra %}{% endblock %}
+</head>
+<body>
+    <nav>
+        <a href="{{ url_for('index') }}">Lux Resonans Simulation</a> |
+        <a href="{{ url_for('theory') }}">Theory</a> |
+        <a href="{{ url_for('experiment_info') }}">Experiment Setup</a>
+    </nav>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>&copy; 2025 Lux Resonans Project</p>
+    </footer>
+    {% block scripts_extra %}{% endblock %}
+</body>
+</html>

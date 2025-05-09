@@ -1,0 +1,144 @@
+/* /lux_resonans/static/css/style.css */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+nav {
+    background: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1rem;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    padding: 2rem 1rem;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+.controls,
+.visualization {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.controls h2,
+.visualization h2 {
+    margin-top: 0;
+    color: #333;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    min-width: 150px;
+    /* Align labels */
+}
+
+input[type="number"],
+select {
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    /* So padding doesn't add to width */
+}
+
+input[type="range"] {
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#intensityPatternChart {
+    max-width: 100%;
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 4px;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #333;
+    color: #fff;
+    position: relative;
+    /* Changed from fixed for better flow */
+    bottom: 0;
+    width: 100%;
+    margin-top: 30px;
+}
+
+/* /lux_resonans/static/css/style.css (add this new rule) */
+.chart-container {
+    position: relative;
+    /* Required by Chart.js for responsive behavior */
+    height: 350px;
+    /* << ADJUST THIS VALUE to your desired height, e.g., 300px, 400px */
+    width: 100%;
+    /* Let it take the full width of its parent */
+    margin-bottom: 15px;
+    /* Optional: space below the chart */
+}
+
+/* Ensure the canvas element itself fills its container */
+#intensityPatternChart {
+    display: block;
+    /* Helps prevent extra space below canvas */
+    /* width and height will be handled by Chart.js based on container */
+}
+
+/* Keep existing styles for .visualization as well */
+.visualization {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.visualization h2 {
+    margin-top: 0;
+    color: #333;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+}

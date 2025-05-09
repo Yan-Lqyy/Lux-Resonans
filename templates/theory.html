@@ -1,0 +1,41 @@
+<!-- /lux_resonans/templates/theory.html -->
+{% extends "layout.html" %}
+
+{% block title %}Theory - Lux Resonans{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Theory of Light Interference and Diffraction</h1>
+    
+    <h2>Wave Nature of Light</h2>
+    <p>Light exhibits properties of both waves and particles. Interference and diffraction are phenomena that strongly support the wave model of light.</p>
+
+    <h2>Huygens' Principle</h2>
+    <p>Huygens' principle states that every point on a wavefront can be considered as a source of secondary spherical wavelets. The new wavefront is the envelope of these wavelets.</p>
+
+    <h2>Interference</h2>
+    <p>When two or more waves overlap in space, the resultant displacement is the vector sum of the individual displacements. This is called the principle of superposition.</p>
+    <ul>
+        <li><strong>Constructive Interference:</strong> Occurs when waves meet in phase (e.g., crest meets crest), resulting in a wave of greater amplitude. For double slits, bright fringes occur where the path difference from the slits is an integer multiple of the wavelength: <code>d sin(θ) = mλ</code>, where m = 0, ±1, ±2, ...</li>
+        <li><strong>Destructive Interference:</strong> Occurs when waves meet out of phase (e.g., crest meets trough), resulting in a wave of lesser (or zero) amplitude. For double slits, dark fringes occur where the path difference is a half-integer multiple of the wavelength: <code>d sin(θ) = (m + 1/2)λ</code>.</li>
+    </ul>
+
+    <h2>Diffraction</h2>
+    <p>Diffraction is the bending of waves around the corners of an obstacle or through an aperture into the region of geometrical shadow of the obstacle/aperture.</p>
+    
+    <h3>Single-Slit Diffraction</h3>
+    <p>When light passes through a single slit, it spreads out. The pattern observed on a screen consists of a central bright maximum, flanked by alternating dark and progressively weaker bright fringes.</p>
+    <p>The condition for minima (dark fringes) in single-slit diffraction is given by: <code>a sin(θ) = mλ</code>, where 'a' is the slit width, λ is the wavelength, θ is the angle of diffraction, and m = ±1, ±2, ... (m cannot be 0, as that corresponds to the central maximum).</p>
+    <p>The intensity I at an angle θ is approximately <code>I(θ) = I₀ * (sin(β)/β)²</code>, where <code>β = (πa / λ) * sin(θ)</code>.</p>
+
+    <h3>Double-Slit Interference (with Diffraction effects)</h3>
+    <p>When light passes through two closely spaced slits, the pattern observed is a combination of the interference pattern from two point sources and the diffraction pattern from each individual slit.</p>
+    <p>The intensity I at an angle θ is approximately <code>I(θ) = I₀ * (sin(β)/β)² * cos²(α)</code>, where:</p>
+    <ul>
+        <li><code>β = (πa / λ) * sin(θ)</code> (due to diffraction from slit width 'a')</li>
+        <li><code>α = (πd / λ) * sin(θ)</code> (due to interference from slit separation 'd')</li>
+    </ul>
+
+    <p><em>(More detailed explanations, diagrams, and derivations can be added here.)</em></p>
+</div>
+{% endblock %}

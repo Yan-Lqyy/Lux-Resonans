@@ -1,0 +1,81 @@
+<!-- /lux_resonans/templates/index.html -->
+{% extends "layout.html" %}
+
+{% block title %}Lux Resonans - Simulation{% endblock %}
+
+{% block head_extra %}
+<!-- Chart.js for plotting -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Light Interference & Diffraction Simulation</h1>
+
+    <div class="controls">
+        <h2>Parameters</h2>
+
+        <label for="simulationType">Simulation Type:</label>
+        <select id="simulationType">
+            <option value="double_slit" selected>Double Slit</option>
+            <option value="single_slit">Single Slit</option>
+        </select>
+        <br><br>
+
+        <label for="wavelength">Wavelength:</label>
+        <input type="number" id="wavelength" value="550">
+        <select id="wavelengthUnit">
+            <option value="nm" selected>nm (Nanometers)</option>
+            <option value="µm">µm (Micrometers)</option>
+        </select>
+        <input type="range" id="wavelengthSlider" min="380" max="750" value="550" step="1">
+        <span id="wavelengthDisplay">550 nm</span>
+        <div id="colorPreview"
+            style="width: 50px; height: 20px; border: 1px solid #ccc; display: inline-block; vertical-align: middle;">
+        </div>
+        <br><br>
+
+        <label for="slitWidth">Slit Width (a):</label>
+        <input type="number" id="slitWidth" value="10">
+        <select id="slitWidthUnit">
+            <option value="µm" selected>µm (Micrometers)</option>
+            <option value="mm">mm (Millimeters)</option>
+        </select>
+        <br><br>
+
+        <div id="doubleSlitParams">
+            <label for="slitSeparation">Slit Separation (d):</label>
+            <input type="number" id="slitSeparation" value="50">
+            <select id="slitSeparationUnit">
+                <option value="µm" selected>µm (Micrometers)</option>
+                <option value="mm">mm (Millimeters)</option>
+            </select>
+            <br><br>
+        </div>
+
+        <label for="screenDistance">Screen Distance (L):</label>
+        <input type="number" id="screenDistance" value="1">
+        <select id="screenDistanceUnit">
+            <option value="m" selected>m (Meters)</option>
+            <option value="cm">cm (Centimeters)</option> <!-- You'd need to add 'cm' to UNIT_CONVERSIONS in app.py -->
+        </select>
+        <br><br>
+
+        <button id="runSimulation">Run Simulation</button>
+    </div>
+
+    <!-- /lux_resonans/templates/index.html (inside the .visualization div) -->
+    <div class="visualization">
+        <h2>Resulting Pattern</h2>
+        <!-- Add a container for the chart with a specific style or class -->
+        <div class="chart-container">
+            <canvas id="intensityPatternChart"></canvas> <!-- Removed width and height attributes -->
+        </div>
+        <p id="errorMessage" style="color: red;"></p>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts_extra %}
+<script src="{{ url_for('static', filename='js/simulation.js') }}"></script>
+{% endblock %}

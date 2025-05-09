@@ -1,0 +1,73 @@
+<!-- /lux_resonans/templates/experiment.html -->
+{% extends "layout.html" %}
+
+{% block title %}Experiment Setup - Lux Resonans{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Conducting the Experiment</h1>
+    
+    <h2>Apparatus Needed:</h2>
+    <ul>
+        <li><strong>Light Source:</strong>
+            <ul>
+                <li>A laser (e.g., red He-Ne laser or a laser pointer) is ideal as it's monochromatic and coherent.</li>
+                <li>Alternatively, a bright lamp with a narrow color filter and a pre-slit (to create a coherent line source) can be used, though the pattern may be less sharp.</li>
+            </ul>
+        </li>
+        <li><strong>Slits:</strong>
+            <ul>
+                <li>Commercially available slides with single and double slits of known widths and separations.</li>
+                <li>DIY slits can be made carefully using razor blades or by painting a microscope slide black and scratching fine lines.</li>
+            </ul>
+        </li>
+        <li><strong>Screen:</strong> A white piece of paper, a wall, or a translucent screen.</li>
+        <li><strong>Measuring Tools:</strong> A ruler or calipers to measure distances (slit-to-screen, fringe spacing). An optical bench can help with alignment and measurement.</li>
+    </ul>
+
+    <h2>Basic Setup:</h2>
+    <ol>
+        <li><strong>Alignment:</strong> Position the light source, slit(s), and screen in a straight line. The light should be incident normally (perpendicularly) on the slit assembly.
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Double_Slit_Experiment_Diagram.svg/600px-Double_Slit_Experiment_Diagram.svg.png" alt="Double Slit Setup Diagram" style="max-width:400px; margin:10px 0;">
+            <p style="font-size:0.8em;"><em>Diagram of a typical double-slit experiment setup. (Source: Wikimedia Commons)</em></p>
+        </li>
+        <li><strong>Dark Environment:</strong> Conduct the experiment in a darkened room to make the faint fringes more visible.</li>
+        <li><strong>Distances:</strong>
+            <ul>
+                <li>The distance 'L' from the slits to the screen should be significantly larger than the slit separation 'd' and slit width 'a' (e.g., L ~ 1 meter, d ~ 0.1-0.5 mm, a ~ 0.04-0.1 mm).</li>
+                <li>The slit separation 'd' should typically be a few times larger than the slit width 'a'.</li>
+            </ul>
+        </li>
+    </ol>
+
+    <h2>Procedure:</h2>
+    <ol>
+        <li>Shine the light source through the chosen slit (single or double).</li>
+        <li>Observe the pattern of bright and dark fringes on the screen.</li>
+        <li><strong>Measurements (Example for determining wavelength):</strong>
+            <ul>
+                <li>Measure the distance 'L' from the slits to the screen.</li>
+                <li>For double slits, measure the distance 'x' between several bright fringes (e.g., across 5 fringes). Calculate the average fringe spacing Δx = x / (number of fringes - 1).</li>
+                <li>Use the formula for bright fringes in a double-slit experiment (for small angles): <code>Δx = (λL) / d</code>.</li>
+                <li>If 'd' (slit separation) and 'L' are known, you can calculate the wavelength λ: <code>λ = (Δx * d) / L</code>.</li>
+                <li>Similar measurements and calculations can be done for single-slit diffraction to determine slit width 'a' or wavelength.</li>
+            </ul>
+        </li>
+        <li>Observe how the pattern changes if you:
+            <ul>
+                <li>Change the color of light (wavelength).</li>
+                <li>Change the slit width 'a'.</li>
+                <li>Change the slit separation 'd' (for double slits).</li>
+                <li>Change the distance 'L' to the screen.</li>
+            </ul>
+        </li>
+    </ol>
+
+    <h2>Safety Precautions:</h2>
+    <ul>
+        <li><strong>Laser Safety:</strong> NEVER look directly into a laser beam or its strong reflections. Do not point a laser at other people. If using a Class 3R/3B or higher laser, appropriate laser safety goggles should be worn. Be aware of reflective surfaces.</li>
+        <li>General lab safety if using other electrical equipment.</li>
+    </ul>
+    <p><em>(Further details, tips for accurate measurements, and common challenges can be added here.)</em></p>
+</div>
+{% endblock %}
